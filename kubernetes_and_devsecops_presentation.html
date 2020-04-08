@@ -25,25 +25,95 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section id="title-slide" data-transition="convex">
+				<section id="title-slide" data-transition="convex" data-transition-speed="slow">
 					<h2>DevSecOps in Kubernetes</h2>
 					<p>Emelie Tham</p>
 					<p>Philip Wester</p>
 				</section>
 				<section data-transition="convex">
+					<section data-transition="convex">
+						<h2>The <span class="fragment highlight-red">What</span> and <span class="fragment highlight-red">Why</span> of DevSecOps</h2>
+					</section>
+					<section data-transition="fade">
+						<p style="font-size: 80%; margin-bottom: 5%;"> Before DevOps...</p> 
+						<img src="20200414_kubernetes_and_devsecops_presentation/devopsmeme.jpg"/>
+					</section>
 					<section data-transition="fade">
 						<div style="font-size: 80%; margin-bottom: 5%;">
-							DevOps bridges the gap between <span style="color:darkcyan;">development</span> and <span style="color:cyan;">operations</span>
+							<p>
+								DevOps bridges the gap between <span style="color:#278ACB;">development</span> and <span style="color:#1EE1FF;">operations</span>
+							</p>
+							<p class="fragment fade-down">
+								Next step...?
+							</p>
 						</div>
-						<img src="20200414_kubernetes_and_devsecops_presentation/devopslogo.jpg" style="border: none;"></img>
+						<a href="https://www.technologyforyou.org/csa-releases-the-six-pillars-of-devsecops-report/">
+							<img src="20200414_kubernetes_and_devsecops_presentation/devopslogo.jpg" style="border: none;"/>
+						</a>
 					</section>
 					<section data-transition="fade">
-						<div style="font-size: 80%; margin-bottom: 5%;">DevSecOps incorporates <span style="color: #BE842A;">security</span> to DevOps</div>
-						<img src="20200414_kubernetes_and_devsecops_presentation/devsecopslogo.jpg" style="border: none;"></img>
+						<div style="font-size: 80%; margin-bottom: 5%;">
+							<p>
+								...DevSecOps!
+							</p>
+							<p>
+								Incorporating <span style="color: #F2A81F;">security</span> to DevOps
+							</p>
+						</div>
+						<a href="https://www.technologyforyou.org/csa-releases-the-six-pillars-of-devsecops-report/">
+							<img src="20200414_kubernetes_and_devsecops_presentation/devsecopslogo.jpg" style="border: none;"/>
+						</a>
+					</section>
+					<section>
+						<p>DevSecOps is the application of DevOps practices through the lens of security by <span class="fragment highlight-red">shifting security left</span>, <span class="fragment highlight-red">automating security tests </span> and <span class="fragment highlight-red">monitoring</span> with the aim of making communication between developers and security engineers more effective.</p>
+					</section>
+					<section data-transition="convex">
+						<p style="font-size: 80%;">Let's not leave security engineers out of the DevOps circle</p>
+						<img src="/20200414_kubernetes_and_devsecops_presentation/sad-amumu.gif"/>
+					</section>
+					<section>
+						<p>... when there are immense benefits of including them! <span style="color: yellow;">&#x1F603;</span></p>
+						<ul>
+							<!––––––––––––––––––––––––––––––––––––––––––––––––––––––––TODO––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––>
+						</ul>
+					</section>
+				</section>				
+				<section data-transition="convex">
+					<section>
+						<h2>Kubernetes</h2>
+					</section>
+					<section >
+						<p>An open-source system that automates the deployment, scaling and mangement of containerized applications.
 					</section>
 				</section>
-				<section>
-					
+				<section data-transition="convex" data-background="/20200414_kubernetes_and_devsecops_presentation/giphy.gif" data-background-size="100% 100%">
+					<h3 >Any Questions?</h3>
+				</section>
+				<section data-transition="convex">
+					<h4>References</h4>
+      					<ol style="font-size: 70%;">
+         					<li>
+            					<p>Kim Carter, <cite>Francois Raynaud on DevSecOps</cite>, IEEE Software, (2017)</p>
+							 </li>
+         					<li>
+								<p>
+									Nipuna Dilhara, <cite>CSA Releases “The Six Pillars of DevSecOps” Report.</cite> 
+										<a href="https://medium.com/@nipunadilhara/how-kubernetes-advances-devsecops-117572983b5a">
+											https://medium.com/@nipunadilhara/how-kubernetes-advances-devsecops-117572983b5a
+										</a>
+									Accessed on [2020-04-8] (2020)
+								</p>
+							 </li>
+							 <li>
+								<p>
+									Technology For You, <cite>How Kubernetes Advances DevSecOps.</cite> 
+										<a href="https://www.technologyforyou.org/csa-releases-the-six-pillars-of-devsecops-report/">
+											https://www.technologyforyou.org/csa-releases-the-six-pillars-of-devsecops-report/
+										</a>
+									Accessed on [2020-04-8] (2019)
+								</p>
+         					</li>
+     		 			</ol>
 				</section>
 			</div>
 		</div>
@@ -51,9 +121,6 @@
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				hash: true,
 				dependencies: [
