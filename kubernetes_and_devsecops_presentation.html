@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/blood.css">
+		<link rel="stylesheet" href="20200414_kubernetes_and_devsecops_presentation/custom.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -108,6 +109,14 @@
 						<h2>Kubernetes Security</h2>
 					</section>
 					<section data-transition="fade">
+						<h4>The 4C's of Cloud Native Security</h4>
+						<img src="20200414_kubernetes_and_devsecops_presentation/4c.png" style="border: none;"/>
+					</section>
+					<section data-transition="fade">
+						<h4>The 4C's of Cloud Native Security</h4>
+						<img src="20200414_kubernetes_and_devsecops_presentation/4c-modified.png" style="border: none;"/>
+					</section>
+					<section data-transition="fade">
 						<h4 style="margin-bottom: 10%;">Kubernetes Attack Surface</h4>
 						<div style="font-size: 70%;">
 							<p class="fragment fade-up">Kubernetes API</p>
@@ -126,20 +135,51 @@
 						<p style="font-weight: bold; font-size: 80%;">Don’t expose your API or service if you do not have to!</p>
 						<p style="font-size: 300%;">&#x26A0;</p>
 					</section>
-					<section data-transition="fade">
-						<h4>The 4C's of Cloud Native Security</h4>
-						<img src="20200414_kubernetes_and_devsecops_presentation/4c.png" style="border: none;"/>
+					<section>
+						<h4 style="margin-bottom: 10%;">Securing Kubernete's Cluster</h4>
+						<p class="fragment grow">Kubernete's API Security</p>
+						<p>Cluster Service Security</p>
 					</section>
 					<section data-transition="fade">
-						<h4>The 4C's of Cloud Native Security</h4>
-						<img src="20200414_kubernetes_and_devsecops_presentation/4c-modified.png" style="border: none;"/>
+						<h4>Kubernete's Authentication</h4>
+						<div class="flex-container" style="height: 230px;">
+							<div class="column" style="padding-left: 5%;">
+								<p>Used for both <span>Service</span> and <span>Users</span> accounts</p>
+								<p>Useless without Authorization</p>		
+								<p>Kubelets allow unauthenticated access to their API by default</p>
+							</div>
+							<div class="column" style="padding-left: 5%;">
+								<p>Authentication Methods:</p>
+								<ul style="font-size: 80%;">
+									<li>Certificates</li>
+									<li>Bearer Tokens</li>
+									<li>Authenticating proxy</li>
+									<li>HTTP basic authentication</li>
+								</ul>
+							</div>
+						</div>
+						<img src="20200414_kubernetes_and_devsecops_presentation/authentication.png"/>	
+					</section>
+					<section data-transition="fade">
+						<h4>Kubernete's Authorization</h4>
+						<div style="font-size: 60%; height: 230px;">
+							<p>Role-Based Access Control (RBAC)</p>
+							<p>Attribute-based access control (ABAC)</p>		
+							<p>Kubelets API authorization</p>
+						</div>
+						<img src="20200414_kubernetes_and_devsecops_presentation/athorization.png"/>	
 					</section>
 					<section>
-						<h4 style="margin-bottom: 10%;">Two main areas for securing Kubernetes</h4>
-						<div style="font-size: 90%;">
-							<p style="margin-bottom: 3%;">Components <span class="fragment highlight-red"> of </span>the Cluster</p>
-							<p>Components <span class="fragment highlight-red"> in </span>the Cluster</p>
-						</div>
+						<h4 style="margin-bottom: 10%;">Securing Kubernete's Cluster</h4>
+						<p>Kubernete's API Security</p>
+						<p class="fragment grow">Cluster Service Security</p>
+					</section>
+					<section>
+						<p style="margin-bottom: 10%;">Kubernetes does <span style="color: red;">NOT</span> protect your cluster from bad practices</p>
+						<p>Kubernetes <span style="color: red;">CAN</span> limit the damage in case of a breach, if implemented correctly</p>
+					</section>
+					<section>
+						<h4>How to strengthen Kubernete's cluster security</h4>
 					</section>
 				</section>
 				<section id="conclusion-section" data-transition="convex">

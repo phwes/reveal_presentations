@@ -1,0 +1,9 @@
+.flex-container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    font-size: 60%; 
+    text-align: left;
+}
