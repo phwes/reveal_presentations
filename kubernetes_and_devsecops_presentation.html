@@ -108,6 +108,18 @@
 					<section>
 						<h2>Kubernetes Security</h2>
 					</section>
+					<section>
+						<h4 style="margin-bottom: 10%;">Assumption that Kubernetes is secure by default...</h4>
+						<div style="margin-left: 5%; text-align: left; font-size: 80%;">
+							<p>Security cannot be an afterthought</p>
+							<p>Several security vulnerabilities have been found:</p>
+							<ul style="font-size: 90%;">
+								<li>Billion Laughs vulnerability</li>
+								<li>runC vulnerability</li>
+							</ul>
+							<p>Tesla Kubernetes Cryptojacking Exploit</p>
+						</div>
+					</section>
 					<section data-transition="fade">
 						<h4>The 4C's of Cloud Native Security</h4>
 						<img src="20200414_kubernetes_and_devsecops_presentation/4c.png" style="border: none;"/>
@@ -116,13 +128,11 @@
 						<h4>The 4C's of Cloud Native Security</h4>
 						<img src="20200414_kubernetes_and_devsecops_presentation/4c-modified.png" style="border: none;"/>
 					</section>
-					<section data-transition="fade">
-						<h4 style="margin-bottom: 10%;">Kubernetes Attack Surface</h4>
-						<div style="font-size: 70%;">
-							<p class="fragment fade-up">Kubernetes API</p>
-							<p class="fragment fade-up">Application running inside Kubernetes</p>
-							<p class="fragment fade-up">The Cloud Server</p>
-						</div>
+					<section>
+						<h4 style="margin-bottom: 10%;">Important Security Principles</h4>
+						<p class="fragment highlight-current-blue">Defense in Depth</p>
+						<p class="fragment highlight-current-green">Least Privilege</p>
+						<p class="fragment highlight-current-red">Reduce Attack Surface</p>
 					</section>
 					<section data-transition="fade" data-background="20200414_kubernetes_and_devsecops_presentation/47ccc0738a4247a03863922199d5e257.jpg">
 						<h3 style="color: red;">Warning</h3>
@@ -135,10 +145,16 @@
 						<p style="font-weight: bold; font-size: 80%;">Don’t expose your API or service if you do not have to!</p>
 						<p style="font-size: 300%;">&#x26A0;</p>
 					</section>
+				</section>
+				<section>
 					<section>
-						<h4 style="margin-bottom: 10%;">Securing Kubernetes Cluster</h4>
-						<p class="fragment grow">Kubernetes API Security</p>
-						<p>Cluster Service Security</p>
+						<h2>Securing Kubernetes Cluster</h2>
+					</section>
+					<section>
+						<h3>1. Controlling access to Kubernetes API</h3>
+					</section>
+					<section>
+						<h4>Use TSL for all API traffic</h4>
 					</section>
 					<section data-transition="fade">
 						<h4>Kubernetes Authentication</h4>
@@ -170,16 +186,20 @@
 						<img src="20200414_kubernetes_and_devsecops_presentation/athorization.png"/>	
 					</section>
 					<section>
-						<h4 style="margin-bottom: 10%;">Securing Kubernetes Cluster</h4>
-						<p>Kubernetes API Security</p>
-						<p class="fragment grow">Cluster Service Security</p>
+						<h4 style="margin-bottom: 10%;">Access Control with RBAC</h4>
+					</section>
+					<section>
+						<h3>2. Controlling access to the Kubelet</h3>
+					</section>
+					<section>
+						<h3>3. Controlling capabilities of workload/user at runtime</h3>
+					</section>
+					<section>
+						<h3>4. Protecting clusters from compromise</h3>
 					</section>
 					<section>
 						<p style="margin-bottom: 10%;">Kubernetes does <span style="color: red;">NOT</span> protect your cluster from bad practices</p>
 						<p>Kubernetes <span style="color: red;">CAN</span> limit the damage in case of a breach, if implemented correctly</p>
-					</section>
-					<section>
-						<h4>How to strengthen Kubernetes cluster security</h4>
 					</section>
 				</section>
 				<section id="conclusion-section" data-transition="convex">
@@ -188,7 +208,7 @@
 					</section>
 				</section>
 				<section id="thank-you-slide" data-transition="convex" data-background="20200414_kubernetes_and_devsecops_presentation/giphy.gif" data-background-size="100% 100%">
-					<h3 >Any Questions?</h3>
+					<h3 >Any Questions?</h4>
 				</section>
 				<section id="reference-slide" data-transition="convex">
 					<h4>References</h4>
