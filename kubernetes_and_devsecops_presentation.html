@@ -119,10 +119,16 @@
 							</ul>
 							<p>Tesla Kubernetes Cryptojacking Exploit</p>
 						</div>
+						<aside class="notes">
+							
+						</aside>
 					</section>
 					<section data-transition="fade">
 						<h4>The 4C's of Cloud Native Security</h4>
 						<img src="20200414_kubernetes_and_devsecops_presentation/4c.png" style="border: none;"/>
+						<aside class="notes">
+							Security can be divided into 4 levels...
+						</aside>
 					</section>
 					<section data-transition="fade">
 						<h4>The 4C's of Cloud Native Security</h4>
@@ -133,6 +139,9 @@
 						<p class="fragment highlight-current-blue">Defense in Depth</p>
 						<p class="fragment highlight-current-green">Least Privilege</p>
 						<p class="fragment highlight-current-red">Reduce Attack Surface</p>
+						<aside class="notes">
+							
+						</aside>
 					</section>
 					<section data-transition="fade" data-background="20200414_kubernetes_and_devsecops_presentation/47ccc0738a4247a03863922199d5e257.jpg">
 						<h3 style="color: red;">Warning</h3>
@@ -151,12 +160,16 @@
 						<h2>Securing Kubernetes Cluster</h2>
 					</section>
 					<section>
-						<h4>1. Controlling access to Kubernetes API</h4>
+						<p style="margin-bottom: 10%;">Kubernetes does <span style="color: red;">NOT</span> protect your cluster from bad practices</p>
+						<p>Kubernetes <span style="color: red;">CAN</span> limit the damage in case of a breach, if implemented correctly</p>
 					</section>
 					<section style="text-align: left;">
-						<p>Use TSL for all API traffic</p>
-						<p>API Authentication</p>
-						<p>API Authorization</p>
+						<h4>1. Securing access to Kubernetes API</h4>
+						<ul>
+							<li>Use TSL for all API traffic</li>
+							<li>API Authentication</li>
+							<li>API Authorization</li>
+						</ul>
 					</section>
 					<section data-transition="fade">
 						<h4>Kubernetes Authentication</h4>
@@ -187,43 +200,35 @@
 						</div>
 						<img src="20200414_kubernetes_and_devsecops_presentation/athorization.png"/>	
 					</section>
-					<section>
-						<h4 style="margin-bottom: 10%;">Access Control with RBAC</h4>
-					</section>
-					<section>
-						<h3>2. Controlling access to the Kubelet</h3>
+					<section style="text-align: left;">
+						<h4>Access Control with RBAC</h4>
 					</section>
 					<section style="text-align: left;">
-						<p>Disable anonymous access</p>
-						<p>Ensure requests are authorized</p>
-						<p>Limit permissions of kubelets</p>
-						<p>Turn off the read-only port</p>
-					</section>
-					<section>
-						<h3>3. Controlling capabilities of workload/user at runtime</h3>
-					</section>
-					<section style="text-align: left;">
-						<p>Limit resource usage on cluster</p>
-						<p>Control container's privileges</p>
-						<p>Preventing loading of unwanted kernel modules in containers</p>
-						<p>Restrict network access</p>
-						<p>Restrict cloud meta data API access</p>
-						<p>Controlling access nodes' pods</p>
-					</section>
-					<section>
-						<h3>4. Protecting clusters from compromise</h3>
+						<h4>2. Securing Kubernetes Pods</h4>
+						<ul>
+							<li>Security Context</li>
+							<li>Pod Security Policies (admission controllers)</li>
+							<li>Network Policies</li>
+							<li>Resource Allocation Management</li>
+						</ul>
 					</section>
 					<section style="text-align: left;">
-						<p>Restrict access to etcd</p>
-						<p>Enable audit logging</p>
-						<p>Rotate infrastructure credentials frequently</p>
-						<p>Review third party integrations</p>
-						<p>Encrypt secrets at rest</p>
+						<h4>Resource Allocation Management</h4>
+						<p>Resource Quota</p>
+						<p>Limit Range</p>
+						<p>To prevent i.e. Cryptojacking exploits</p>
 					</section>
-				</section>
-				<section>
-					<p style="margin-bottom: 10%;">Kubernetes does <span style="color: red;">NOT</span> protect your cluster from bad practices</p>
-					<p>Kubernetes <span style="color: red;">CAN</span> limit the damage in case of a breach, if implemented correctly</p>
+					<section style="text-align: left;">
+						<h4>3. Securing Kubernetes Components</h4>
+						<ul>
+							<li>Enable Kubelet authentication and authorization</li>
+							<li>Restrict access to etcd</li>
+							<li>Enable audit logging</li>
+							<li>Rotate infrastructure credentials frequently</li>
+							<li>Review third party integrations</li>
+							<li>Encrypt secrets at rest</li>
+						</ul>
+					</section>
 				</section>
 				<section id="conclusion-section" data-transition="convex">
 					<section>
