@@ -202,31 +202,72 @@
 					</section>
 					<section style="text-align: left;">
 						<h4>Access Control with RBAC</h4>
+						<p>Namespaces</p>
 					</section>
 					<section style="text-align: left;">
 						<h4>2. Securing Kubernetes Pods</h4>
 						<ul>
 							<li>Security Context</li>
-							<li>Pod Security Policies (admission controllers)</li>
+							<li>Pod Security Policies (Admission Controllers)</li>
 							<li>Network Policies</li>
 							<li>Resource Allocation Management</li>
+							<li>Metadata API in Cloud Platforms</li>
+						</ul>
+					</section>
+					<section style="text-align: left;">
+						<h4>Security Context</h4>
+						<p>Controlling what privileges and access containers run with.</p>
+						<p>It allows pods to...</p>
+						<ul>
+							<li>run as a specific Linux user (i.e. root),</li>
+							<li>run as privileged,</li>
+							<li>access the host network, e.t.c.</li>
+						</ul>
+					</section>
+					<section style="text-align: left;">
+						<h4>Pod Security Policies</h4>
+						<p>Implemented as an admission controller.</p>
+						<p>Restricts which pods can be run on the cluster according to the security context.</p>
+					</section>
+					<section style="text-align: left;">
+						<h4>Network Policies</h4>
+						<p>Limiting the traffic flow between pods.</p>
+						<p>Helps add extra layer of security:</p>
+						<ul>
+							<li>Stop external attacker from sending traffic to applications running inside the pods.</li>
+							<li>Restricts network access for compromised container.</li>
+							<li>Restricts metadata API in cloud platforms</li>
 						</ul>
 					</section>
 					<section style="text-align: left;">
 						<h4>Resource Allocation Management</h4>
 						<p>Resource Quota</p>
 						<p>Limit Range</p>
-						<p>To prevent i.e. Cryptojacking exploits</p>
+						<p>Prevent unathorized resource consumption</p>
 					</section>
 					<section style="text-align: left;">
 						<h4>3. Securing Kubernetes Components</h4>
 						<ul>
-							<li>Enable Kubelet authentication and authorization</li>
-							<li>Restrict access to etcd</li>
-							<li>Enable audit logging</li>
-							<li>Rotate infrastructure credentials frequently</li>
-							<li>Review third party integrations</li>
-							<li>Encrypt secrets at rest</li>
+							<li class="fragment fade-in-then-semi-out">Enable Kubelet authentication and authorization</li>
+							<li class="fragment fade-in-then-semi-out">Restrict access to etcd</li>
+							<li class="fragment fade-in-then-semi-out">Enable audit logging</li>
+							<li class="fragment fade-in-then-semi-out">Rotate infrastructure credentials frequently</li>
+							<li class="fragment fade-in-then-semi-out">Review third party integrations</li>
+							<li class="fragment fade-in-then-semi-out">Encrypt secrets at rest</li>
+						</ul>
+					</section>
+					<section>
+						<p>To further strengthen Kubernetes security make use of open source tools!</p>
+					</section>
+					<section style="text-align: left;">
+						<h4>Tools approved by CNCF:</h4>
+						<ul style="font-size: 60%;">
+							<li><a href="https://theupdateframework.github.io/">TUF</a> - The Update Framework is used for secure software updates and is based on ideas surrounding trust and integrity</li>
+							<li><a href="https://docs.docker.com/notary/getting_started/">Notary</a> - Based on TUF, it is a solution to secure software updates and distribution</li>
+							<li><a href="https://github.com/coreos/clair">Clair</a> - for the static analysis of vulnerabilities in containers</li>
+							<li><a href="https://github.com/aquasecurity/kube-bench">Kube-bench</a> - checks whether a Kubernetes cluster is deployed according to security best practices</li>
+							<li><a href="https://kubesec.io/">Kubesec</a> - helps quantify risks for Kubernetes resources</li>
+							<li><a href="https://github.com/Shopify/kubeaudit">Kubeaudit</a> - audits applications in your K8s cluster</li>
 						</ul>
 					</section>
 				</section>
