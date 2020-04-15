@@ -151,10 +151,12 @@
 						<h2>Securing Kubernetes Cluster</h2>
 					</section>
 					<section>
-						<h3>1. Controlling access to Kubernetes API</h3>
+						<h4>1. Controlling access to Kubernetes API</h4>
 					</section>
-					<section>
-						<h4>Use TSL for all API traffic</h4>
+					<section style="text-align: left;">
+						<p>Use TSL for all API traffic</p>
+						<p>API Authentication</p>
+						<p>API Authorization</p>
 					</section>
 					<section data-transition="fade">
 						<h4>Kubernetes Authentication</h4>
@@ -191,16 +193,37 @@
 					<section>
 						<h3>2. Controlling access to the Kubelet</h3>
 					</section>
+					<section style="text-align: left;">
+						<p>Disable anonymous access</p>
+						<p>Ensure requests are authorized</p>
+						<p>Limit permissions of kubelets</p>
+						<p>Turn off the read-only port</p>
+					</section>
 					<section>
 						<h3>3. Controlling capabilities of workload/user at runtime</h3>
+					</section>
+					<section style="text-align: left;">
+						<p>Limit resource usage on cluster</p>
+						<p>Control container's privileges</p>
+						<p>Preventing loading of unwanted kernel modules in containers</p>
+						<p>Restrict network access</p>
+						<p>Restrict cloud meta data API access</p>
+						<p>Controlling access nodes' pods</p>
 					</section>
 					<section>
 						<h3>4. Protecting clusters from compromise</h3>
 					</section>
-					<section>
-						<p style="margin-bottom: 10%;">Kubernetes does <span style="color: red;">NOT</span> protect your cluster from bad practices</p>
-						<p>Kubernetes <span style="color: red;">CAN</span> limit the damage in case of a breach, if implemented correctly</p>
+					<section style="text-align: left;">
+						<p>Restrict access to etcd</p>
+						<p>Enable audit logging</p>
+						<p>Rotate infrastructure credentials frequently</p>
+						<p>Review third party integrations</p>
+						<p>Encrypt secrets at rest</p>
 					</section>
+				</section>
+				<section>
+					<p style="margin-bottom: 10%;">Kubernetes does <span style="color: red;">NOT</span> protect your cluster from bad practices</p>
+					<p>Kubernetes <span style="color: red;">CAN</span> limit the damage in case of a breach, if implemented correctly</p>
 				</section>
 				<section id="conclusion-section" data-transition="convex">
 					<section>
