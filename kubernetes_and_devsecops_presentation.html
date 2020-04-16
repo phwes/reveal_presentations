@@ -152,8 +152,8 @@
 					</section>
 					<section style="text-align: left;">
 						<h4>1. Securing access to Kubernetes API</h4>
+						<p>Use TSL for all API traffic</p>
 						<ul>
-							<li>TSL for all API traffic</li>
 							<li>API Authentication</li>
 							<li>API Authorization</li>
 						</ul>
@@ -162,7 +162,7 @@
 						<h4>Kubernetes Authentication</h4>
 						<p>Used for both <span>Service</span> and <span>Users</span> accounts</p>
 						<p>Useless without Authorization</p>		
-						<p>Kubelets allow unauthenticated access to their API by default</p>
+						<p><span style="color: red;">Kubelets</span> allow unauthenticated access to their API by default</p>
 						<aside class="notes">
 							Authentication :- Before a request can be processed/executed, the API server needs to verify who (or what, in case of machine) is issuing the request. 
 						</aside>	
@@ -199,7 +199,7 @@
 						</ul>
 					</section>
 					<section style="text-align: left;">
-						<h4>Good practice to...</h4>
+						<h4>Good authentication practice to...</h4>
 						<p>... use third-party providers</p>
 						<p>... not use static files</p>
 						<p>... enforce life cycle for authentication</p>
@@ -244,7 +244,7 @@
 						</aside>	
 					</section>
 					<section style="text-align: left;">
-						<h4>Access Control with RBAC</h4>
+						<h4>Role-Based Access Control</h4>
 						<div class="flex-container">
 							<div class="column" style="width: 60%;">
 								
@@ -308,7 +308,7 @@
 						<p>To further strengthen Kubernetes security make use of open source tools!</p>
 					</section>
 					<section style="text-align: left;">
-						<h4>Tools approved by CNCF:</h4>
+						<h4>Open source Kubernetes tools:</h4>
 						<ul style="font-size: 60%;">
 							<li><a href="https://theupdateframework.github.io/">TUF</a> - The Update Framework is used for secure software updates and is based on ideas surrounding trust and integrity</li>
 							<li><a href="https://docs.docker.com/notary/getting_started/">Notary</a> - Based on TUF, it is a solution to secure software updates and distribution</li>
