@@ -31,19 +31,6 @@
 					<p>Emelie Tham</p>
 					<p>Philip Wester</p>
 				</section>
-				<section id="agenda-section" data-transition="convex">
-					<section>
-						<h2>Agenda</h2>
-					</section>
-					<section>
-						<div>
-							<p class="fragment fade-in-then-semi-out">What and Why DevSecOps?</p>
-							<p class="fragment fade-in-then-semi-out">What is Kubernetes?</p>
-							<p class="fragment fade-in-then-semi-out">Kubernetes Security</p>
-							<p class="fragment fade-in-then-semi-out">Conclusion</p>
-						</div>
-					</section>
-				</section>
 				<section id="devsecops-section" data-transition="convex">
 					<section>
 						<h2>The <span class="fragment highlight-red">What</span> and <span class="fragment highlight-red">Why</span> of DevSecOps</h2>
@@ -196,13 +183,20 @@
 						<div style="font-size: 60%; height: 230px;">
 							<p>Role-Based Access Control (RBAC)</p>
 							<p>Attribute-based access control (ABAC)</p>		
-							<p>Kubelets API authorization</p>
+							<p>Node Authorization (Kubelets API authorization)</p>
+							<p>Webhooks</p>
 						</div>
 						<img src="20200414_kubernetes_and_devsecops_presentation/athorization.png"/>	
 					</section>
 					<section style="text-align: left;">
 						<h4>Access Control with RBAC</h4>
-						<p>Namespaces</p>
+						<div class="flex-container">
+							<div class="column" style="width: 60%;">
+								
+								<p>Namespaces</p>
+							</div>
+							<img class="column" src="20200414_kubernetes_and_devsecops_presentation/RBAC.png" />
+						</div>
 					</section>
 					<section style="text-align: left;">
 						<h4>2. Securing Kubernetes Pods</h4>
@@ -211,7 +205,6 @@
 							<li>Pod Security Policies (Admission Controllers)</li>
 							<li>Network Policies</li>
 							<li>Resource Allocation Management</li>
-							<li>Metadata API in Cloud Platforms</li>
 						</ul>
 					</section>
 					<section style="text-align: left;">
