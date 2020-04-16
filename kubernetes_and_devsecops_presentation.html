@@ -158,25 +158,43 @@
 							<li>API Authorization</li>
 						</ul>
 					</section>
-					<section data-transition="fade">
+					<section data-transition="fade" style="text-align: left;">
 						<h4>Kubernetes Authentication</h4>
-						<div class="flex-container" style="height: 230px;">
-							<div class="column" style="padding-left: 5%;">
-								<p>Used for both <span>Service</span> and <span>Users</span> accounts</p>
-								<p>Useless without Authorization</p>		
-								<p>Kubelets allow unauthenticated access to their API by default</p>
-							</div>
-							<div class="column" style="padding-left: 5%;">
-								<p>Authentication Methods:</p>
-								<ul style="font-size: 80%;">
-									<li>Certificates</li>
-									<li>Bearer Tokens</li>
-									<li>Authenticating proxy</li>
-									<li>HTTP basic authentication</li>
-								</ul>
-							</div>
-						</div>
-						<img src="20200414_kubernetes_and_devsecops_presentation/authentication.png"/>	
+						<p>Used for both <span>Service</span> and <span>Users</span> accounts</p>
+						<p>Useless without Authorization</p>		
+						<p>Kubelets allow unauthenticated access to their API by default</p>
+						<img src="20200414_kubernetes_and_devsecops_presentation/authentication.png"/>
+						<aside class="notes">
+							Authentication :- Before a request can be processed/executed, the API server needs to verify who (or what, in case of machine) is issuing the request. 
+						</aside>	
+					</section>
+					<section data-transition="fade">
+						<img src="20200414_kubernetes_and_devsecops_presentation/auth1.png"/>
+						<aside class="notes">
+							Client presents its credentials to the API server.
+						</aside>
+					</section>
+					<section data-transition="fade">
+						<img src="20200414_kubernetes_and_devsecops_presentation/auth2.png"/>
+						<aside class="notes">
+							API server uses one of the configured authentication plugins to establish their identity with an identity provider.	
+						</aside>
+					</section>
+					<section data-transition="fade">
+						<img src="20200414_kubernetes_and_devsecops_presentation/auth3.png"/>
+						<aside class="notes">
+							The identity provider requests information, i.e. username, id, group membership. 
+							If the credentials are in order, the API server moves on to the check permissions (kick-starting the Authorization process), otherwise a HTTP 401 error status code is sent as response.  
+						</aside>
+					</section>
+					<section style="text-align: left;">
+						<h4>Authentication Strategies</h4>
+						<ul style="font-size: 80%;">
+								<li>Certificates</li>
+								<li>Bearer Tokens</li>
+								<li>Authenticating proxy</li>
+								<li>HTTP basic authentication</li>
+						</ul>
 					</section>
 					<section data-transition="fade">
 						<h4>Kubernetes Authorization</h4>
@@ -186,7 +204,10 @@
 							<p>Node Authorization (Kubelets API authorization)</p>
 							<p>Webhooks</p>
 						</div>
-						<img src="20200414_kubernetes_and_devsecops_presentation/athorization.png"/>	
+						<img src="20200414_kubernetes_and_devsecops_presentation/athorization.png"/>
+						<aside class="notes">
+							Authentication :- 
+						</aside>	
 					</section>
 					<section style="text-align: left;">
 						<h4>Access Control with RBAC</h4>
