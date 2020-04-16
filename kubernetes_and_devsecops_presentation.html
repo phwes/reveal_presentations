@@ -93,8 +93,30 @@
 					</section>
 					<section data-background-transition="fade" data-background="20200414_kubernetes_and_devsecops_presentation/Chart_04_Kubernetes-Node.png" data-background-size="100% 100%">
 					</section>
+					<section data-transition="fade">
+						<h4>The 4C's of Cloud Native Security</h4>
+						<img src="20200414_kubernetes_and_devsecops_presentation/4c.png" style="border: none;"/>
+						<aside class="notes">
+							Security can be divided into 4 levels...
+						</aside>
+					</section>
+					<section data-transition="fade">
+						<h4>The 4C's of Cloud Native Security</h4>
+						<img src="20200414_kubernetes_and_devsecops_presentation/4c-modified.png" style="border: none;"/>
+					</section>
+					<section data-transition="fade" data-background="20200414_kubernetes_and_devsecops_presentation/47ccc0738a4247a03863922199d5e257.jpg">
+						<h3 style="color: red;">Warning</h3>
+						<h4>Do not do this At home!</h4>
+						<p>For the sake of the presentation we assume either:</p>
+						<ol style="font-size: 80%;">
+							<li>The Kubernetes API is exposed</li>
+							<li>One or more services running on Kubernetes is exposed</li>
+						</ol>
+						<p style="font-weight: bold; font-size: 80%;">Don’t expose your API or service if you do not have to!</p>
+						<p style="font-size: 300%;">&#x26A0;</p>
+					</section>
 				</section>
-				<section id="kubernetes-security-section" data-transition="convex">
+				<section>
 					<section>
 						<h2>Kubernetes Security</h2>
 					</section>
@@ -112,42 +134,6 @@
 						<aside class="notes">
 							
 						</aside>
-					</section>
-					<section data-transition="fade">
-						<h4>The 4C's of Cloud Native Security</h4>
-						<img src="20200414_kubernetes_and_devsecops_presentation/4c.png" style="border: none;"/>
-						<aside class="notes">
-							Security can be divided into 4 levels...
-						</aside>
-					</section>
-					<section data-transition="fade">
-						<h4>The 4C's of Cloud Native Security</h4>
-						<img src="20200414_kubernetes_and_devsecops_presentation/4c-modified.png" style="border: none;"/>
-					</section>
-					<section>
-						<h4 style="margin-bottom: 10%;">Important Security Principles</h4>
-						<p class="fragment highlight-current-blue">Defense in Depth</p>
-						<p class="fragment highlight-current-green">Least Privilege</p>
-						<p class="fragment highlight-current-red">Reduce Attack Surface</p>
-						<aside class="notes">
-							
-						</aside>
-					</section>
-					<section data-transition="fade" data-background="20200414_kubernetes_and_devsecops_presentation/47ccc0738a4247a03863922199d5e257.jpg">
-						<h3 style="color: red;">Warning</h3>
-						<h4>Do not do this At home!</h4>
-						<p>For the sake of the presentation we assume either:</p>
-						<ol style="font-size: 80%;">
-							<li>The Kubernetes API is exposed</li>
-							<li>One or more services running on Kubernetes is exposed</li>
-						</ol>
-						<p style="font-weight: bold; font-size: 80%;">Don’t expose your API or service if you do not have to!</p>
-						<p style="font-size: 300%;">&#x26A0;</p>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>Securing Kubernetes Cluster</h2>
 					</section>
 					<section>
 						<p style="margin-bottom: 10%;">Kubernetes does <span style="color: red;">NOT</span> protect your cluster from bad practices</p>
